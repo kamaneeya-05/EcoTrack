@@ -43,3 +43,15 @@ Built using **Node.js, Express, and MongoDB**, EcoTrack includes both user-facin
 - **VS Code** – Main development environment
 - **MongoDB Compass** – GUI for managing database (if used)
 - **Browser Console** – Manual testing (no Postman used)
+---
+
+## 🔃 How to Run the Project Locally
+
+### 📦 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/EcoTrack.git
+cd EcoTrack
+npm install
+mongod
+node server.js

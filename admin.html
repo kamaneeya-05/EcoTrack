@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body class="admin-page">
+  <header>
+    <h1>Admin Dashboard</h1>
+    <nav>
+      <a href="dashboard.html">User Dashboard</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="report-section">
+      <h2>Submitted Waste Reports</h2>
+      <table id="reports-table">
+        <thead>
+          <tr>
+            <th>Report ID</th>
+            <th>User</th>
+            <th>Location</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be dynamically loaded here via JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    // Fetch all reports from server and populate the table
+    fetch('/api/admin/reports')
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.querySelector("#reports-table tbody");
+        data.forEach(report => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${report._id}</td>
+            <td>${report.username}</td>
+            <td>${report.location}</td>
+            <td>${report.description}</td>
+            <td><strong>${report.status}</strong></td>
+            <td>
+              <select onchange="updateStatus('${report._id}', this.value)">
+                <option value="Pending" ${report.status === 'Pending' ? 'selected' : ''}>Pending</option>
+                <option value="In Progress" ${report.status === 'In Progress' ? 'selected' : ''}>In Progress</option>
+                <option value="Resolved" ${report.status === 'Resolved' ? 'selected' : ''}>Resolved</option>
+              </select>
+            </td>
+          `;
+          tbody.appendChild(row);
+        });
+      });
+
+    function updateStatus(id, newStatus) {
+      fetch(`/api/admin/reports/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ status: newStatus })
+      }).then(res => {
+        if (res.ok) alert("Status updated!");
+        else alert("Failed to update");
+      });
+    }
+  </script>
+</body>
+
+</html>

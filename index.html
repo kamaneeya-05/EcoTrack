@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoTrack – Smart Waste Reporting</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="hero-section">
+    <nav class="navbar">
+      <div class="logo">EcoTrack</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Report Waste. Earn Rewards. Improve Your Community.</h1>
+      <p>EcoTrack empowers citizens to report public waste, track cleaning status, and get rewarded for being a responsible eco-warrior.</p>
+      <a href="report.html" class="cta-button">Report Now</a>
+    </div>
+  </header>
+
+  <section class="features">
+    <h2>How It Works</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <img src="report.png" alt="Report Waste">
+        <h3>1. Report Waste</h3>
+        <p>Submit photos, location, and description of waste in your area easily using our web form.</p>
+      </div>
+      <div class="card">
+        <img src="track.png" alt="Track Status">
+        <h3>2. Track Progress</h3>
+        <p>Check real-time updates on your reports and get notified once the issue is resolved.</p>
+      </div>
+      <div class="card">
+        <img src="rewards.png" alt="Earn Rewards">
+        <h3>3. Earn Rewards</h3>
+        <p>Collect points and badges every time you contribute — unlock new levels of eco-contributor.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-content">
+      <h2>Why EcoTrack?</h2>
+      <p>Overflowing bins and illegal dumping are serious problems. EcoTrack closes the gap between citizens and municipal services, making waste reporting easy, transparent, and rewarding.</p>
+      <a href="register.html" class="cta-button-alt">Join the Movement</a>
+    </div>
+    <img src="cleanup.png" alt="Community Cleanup">
+  </section>
+
+  <!-- ✅ Contact Us Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form" method="POST" class="contact-form">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="cta-button">Send Message</button>
+   </form>
+  <script src="script.js"></script>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 EcoTrack | Clean Cities, Better Lives</p>
+    <a href="admin.html" style="font-size: 12px;">Admin Panel</a>
+  </footer>
+
+</body>
+
+</html>

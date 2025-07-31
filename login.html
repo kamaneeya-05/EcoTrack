@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login – EcoTrack</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+
+  <div class="auth-container">
+    <div class="auth-left">
+      <h1>Welcome Back 👋</h1>
+      <p>Log in to your EcoTrack account to report, track, and make a difference.</p>
+      <form id="login-form" class="auth-form">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required placeholder="you@example.com" />
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required placeholder="••••••••" />
+
+        <button type="submit">Login</button>
+        <p class="auth-footer">
+          Don't have an account? <a href="register.html">Register here</a>
+        </p>
+      </form>
+    </div>
+    <div class="auth-right">
+      <img src="eco.png" alt="Eco Login Illustration" />
+    </div>
+  </div>
+
+<script src = "script.js"></script>
+</body>
+</html>

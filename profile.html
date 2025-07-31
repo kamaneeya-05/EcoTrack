@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile - EcoTrack</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">EcoTrack</div>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="track-status.html">Track Status</a></li>
+        <li><a href="rewards.html">Rewards</a></li>
+        <li><a href="profile.html" class="active">Profile</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="profile-main">
+    <section class="profile-info">
+      <h2>My Profile</h2>
+      <form id="profile-form">
+        <label for="username">Full Name:</label>
+        <input type="text" id="username" name="username" value="Kamaneeya Kolli" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="kamaneeya@gmail.com" required />
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" value="Vijayawada" />
+
+        <button type="submit" class="btn-submit">Update Profile</button>
+      </form>
+      <p id="update-message" style="color: green; margin-top: 10px;"></p>
+    </section>
+
+    <section class="report-history">
+      <h3>My Report History</h3>
+      <ul>
+        <li>🟢 Garbage Overflow - **Resolved** on 14 July 2025</li>
+        <li>🟡 Open Drainage - **In Progress** (Reported on 18 July 2025)</li>
+        <li>🔴 Illegal Dumping - **Pending Review**</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EcoTrack. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("profile-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("update-message").textContent = "Profile updated successfully!";
+    });
+  </script>
+</body>
+</html>

@@ -41,7 +41,7 @@ Built using **Node.js, Express, and MongoDB**, EcoTrack includes both user-facin
 - `body-parser` – Middleware for parsing POST requests
 - `cors` – Enable cross-origin requests
 - **VS Code** – Main development environment
-- **MongoDB Compass** – GUI for managing database (if used)
+- **MongoDB Compass** – GUI for managing database
 - **Browser Console** – Manual testing (no Postman used)
 ---
 

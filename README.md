@@ -56,11 +56,11 @@ npm install
 mongod
 node server.js
 
-## 👩‍💻 Author  
+### 👩‍💻 Author  
 Kamaneeya Kolli  
 Student, SRM University AP
 
-## 📜 License
+### 📜 License
 
 This project was created solely for academic and internship purposes.  
 It is not licensed for commercial use, redistribution, or modification  

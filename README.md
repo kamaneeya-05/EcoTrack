@@ -55,3 +55,15 @@ cd EcoTrack
 npm install
 mongod
 node server.js
+
+## 👩‍💻 Author  
+Kamaneeya Kolli  
+Student, SRM University AP
+
+## 📜 License
+
+This project was created solely for academic and internship purposes.  
+It is not licensed for commercial use, redistribution, or modification  
+without explicit permission from the author.
+
+All rights reserved © Kamaneeya Kolli

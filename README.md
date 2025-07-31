@@ -45,24 +45,33 @@ Built using **Node.js, Express, and MongoDB**, EcoTrack includes both user-facin
 - **Browser Console** – Manual testing (no Postman used)
 ---
 
+---
+
 ## 🔃 How to Run the Project Locally
 
 ### 📦 1. Clone the Repository
 
-```bash
+\```
 git clone https://github.com/your-username/EcoTrack.git
 cd EcoTrack
 npm install
 mongod
 node server.js
+\```
 
-👩‍💻 Author
-Kamaneeya Kolli
+---
+
+## 👩‍💻 Author
+
+Kamaneeya Kolli  
 Student, SRM University AP
 
-📜 License
-This project was created solely for academic and internship purposes.
-It is not licensed for commercial use, redistribution, or modification
-without explicit permission from the author.
+---
+
+## 📜 License
+
+This project was created solely for academic and internship purposes.  
+It is not licensed for commercial use, redistribution, or modification  
+without explicit permission from the author.  
 
 All rights reserved © Kamaneeya Kolli

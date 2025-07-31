@@ -18,3 +18,28 @@ Built using **Node.js, Express, and MongoDB**, EcoTrack includes both user-facin
 - 🛠️ **Admin Page** for centralized access (view-only for now)
 - 📦 Data stored securely in **MongoDB**
 - ✅ **Manual testing via browser console** (Postman not used)
+
+---
+
+## 🛠️ Tech Stack
+
+### 🔷 Frontend
+- **HTML5** – Page structure (index, register, login, etc.)
+- **CSS3** – Styling with responsive layout and Poppins font
+- **JavaScript** – Form validation, localStorage, UI interactivity
+- **LocalStorage** – Used to store user session name on dashboard
+
+### 🔶 Backend
+- **Node.js** – JavaScript runtime for building server
+- **Express.js** – Routing and API handling
+- **MongoDB** – NoSQL database for user, report, and contact info
+- **Mongoose** – ODM library for MongoDB schemas
+
+### 📦 Libraries & Tools
+- `bcryptjs` – Password hashing for secure user login
+- `multer` – File/image uploads for reporting form
+- `body-parser` – Middleware for parsing POST requests
+- `cors` – Enable cross-origin requests
+- **VS Code** – Main development environment
+- **MongoDB Compass** – GUI for managing database (if used)
+- **Browser Console** – Manual testing (no Postman used)

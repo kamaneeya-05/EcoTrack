@@ -75,3 +75,15 @@ EcoTrack/
 ├── .gitignore           # Ignores node_modules, .env, etc.
 ├── server.js            # Express server entry point
 └── package.json         # Project dependencies
+
+## 👩‍💻 Author
+Kamaneeya Kolli
+Student, SRM University AP
+GitHub: @kamaneeya-05
+
+## 📜 License
+This project was created solely for academic and internship purposes.
+It is not licensed for commercial use, redistribution, or modification
+without explicit permission from the author.
+
+All rights reserved © Kamaneeya Kolli

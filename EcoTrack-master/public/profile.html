@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | EcoTrack</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-shell">
+  <nav class="topbar">
+    <a class="brand" href="dashboard.html"><span class="brand-mark">E</span> EcoTrack</a>
+    <ul class="nav-links">
+      <li><a data-nav href="dashboard.html">Dashboard</a></li>
+      <li><a data-nav href="profile.html">Profile</a></li>
+      <li><a data-logout href="index.html">Logout</a></li>
+    </ul>
+  </nav>
+  <main class="page">
+    <section class="panel">
+      <h1>Profile</h1>
+      <div class="grid grid-3" style="margin-top: 18px;">
+        <div class="card"><span class="muted">Name</span><strong data-user-name>Guest</strong></div>
+        <div class="card"><span class="muted">Role</span><strong id="profile-role">Citizen</strong></div>
+        <div class="card"><span class="muted">Area</span><strong id="profile-area">General Ward</strong></div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const profileUser = JSON.parse(localStorage.getItem('user') || '{}');
+    document.querySelectorAll('[data-user-name]').forEach(node => node.textContent = profileUser.name || 'Guest');
+    document.getElementById('profile-role').textContent = profileUser.role || 'citizen';
+    document.getElementById('profile-area').textContent = profileUser.area || 'General Ward';
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

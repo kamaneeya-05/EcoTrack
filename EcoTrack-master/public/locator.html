@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recycling Locator | EcoTrack</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-shell">
+  <nav class="topbar">
+    <a class="brand" href="dashboard.html"><span class="brand-mark">E</span> EcoTrack</a>
+    <ul class="nav-links">
+      <li><a data-nav href="dashboard.html">Dashboard</a></li>
+      <li><a data-nav href="locator.html">Locator</a></li>
+      <li><a data-logout href="index.html">Logout</a></li>
+    </ul>
+  </nav>
+  <main class="page">
+    <header class="page-header"><div><h1>Recycling center locator</h1><p class="muted">Find nearby recycling, e-waste, and composting points.</p></div></header>
+    <section class="grid grid-2">
+      <div id="locator-map" class="map"></div>
+      <div class="panel"><h2>Centers</h2><div id="center-list" class="timeline"></div></div>
+    </section>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

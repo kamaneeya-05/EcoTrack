@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | EcoTrack</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body class="app-shell">
+  <nav class="topbar">
+    <a class="brand" href="dashboard.html"><span class="brand-mark">E</span> EcoTrack</a>
+    <ul class="nav-links">
+      <li><a data-nav href="dashboard.html">Dashboard</a></li>
+      <li><a data-nav href="report.html">Report</a></li>
+      <li><a data-nav href="track-status.html">Track</a></li>
+      <li><a data-nav href="rewards.html">Rewards</a></li>
+      <li><a data-nav href="community.html">Community</a></li>
+      <li><a data-logout href="index.html">Logout</a></li>
+    </ul>
+  </nav>
+  <main id="dashboard-root" class="page">
+    <header class="page-header">
+      <div><h1>Hello, <span data-user-name>Citizen</span></h1><p class="muted">Your reporting workspace and community impact center.</p></div>
+      <a class="btn" href="report.html">New Report</a>
+    </header>
+    <section id="dashboard-stats" class="grid grid-3"></section>
+    <section class="section grid grid-3">
+      <a class="card" href="report.html"><h3>Report waste</h3><p class="muted">Upload evidence, detect location, and check nearby complaints.</p></a>
+      <a class="card" href="track-status.html"><h3>Track status</h3><p class="muted">Follow each case through municipal workflow stages.</p></a>
+      <a class="card" href="locator.html"><h3>Recycling locator</h3><p class="muted">Find recycling, e-waste, and composting centers.</p></a>
+      <a class="card" href="rewards.html"><h3>Rewards</h3><p class="muted">View green points, badges, and leaderboard ranking.</p></a>
+      <a class="card" href="community.html"><h3>Community forum</h3><p class="muted">Discuss cleanliness ideas and upvote suggestions.</p></a>
+      <a class="card" href="profile.html"><h3>Profile</h3><p class="muted">Review account details and role information.</p></a>
+    </section>
+    <section class="section panel">
+      <h2>Notifications</h2>
+      <div id="notifications-list" class="timeline"></div>
+    </section>
+    <section class="section panel">
+      <h2>EcoBot</h2>
+      <form id="chat-form" class="chatbox">
+        <div id="chat-log" class="chat-log"></div>
+        <div class="form-grid two">
+          <input name="message" placeholder="Ask about segregation, tracking, or recycling">
+          <button class="btn" type="submit">Send</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

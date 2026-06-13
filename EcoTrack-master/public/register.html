@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | EcoTrack</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <section class="auth-main">
+      <a class="brand" href="index.html"><span class="brand-mark">E</span> EcoTrack</a>
+      <h1 style="margin-top: 24px;">Create account</h1>
+      <form id="register-form" class="form-grid two" style="margin-top: 22px;">
+        <div class="field"><label>Full name</label><input id="name" name="name" required></div>
+        <div class="field"><label>Email</label><input id="email" name="email" type="email" required></div>
+        <div class="field"><label>Role</label><select id="role" name="role"><option value="citizen">Citizen/User</option><option value="worker">Municipal Worker</option><option value="supervisor">Supervisor</option><option value="admin">Administrator</option></select></div>
+        <div class="field"><label>Area/Ward</label><input id="area" name="area" value="General Ward"></div>
+        <div class="field"><label>Password</label><input id="password" name="password" type="password" required></div>
+        <div class="field"><label>Confirm password</label><input id="confirmPassword" name="confirmPassword" type="password" required></div>
+        <button class="btn" type="submit">Register</button>
+        <p class="muted">Already registered? <a href="login.html">Login</a></p>
+      </form>
+    </section>
+    <aside class="auth-side"><img src="cleanup.png" alt="Community cleanup"></aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

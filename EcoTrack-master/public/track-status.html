@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Reports | EcoTrack</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body class="app-shell">
+  <nav class="topbar">
+    <a class="brand" href="dashboard.html"><span class="brand-mark">E</span> EcoTrack</a>
+    <ul class="nav-links">
+      <li><a data-nav href="dashboard.html">Dashboard</a></li>
+      <li><a data-nav href="report.html">Report</a></li>
+      <li><a data-nav href="track-status.html">Track</a></li>
+      <li><a data-logout href="index.html">Logout</a></li>
+    </ul>
+  </nav>
+  <main class="page">
+    <header class="page-header"><div><h1>Report timeline</h1><p class="muted">Real-time workflow progress for your complaints.</p></div></header>
+    <section id="status-list" class="grid grid-2"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

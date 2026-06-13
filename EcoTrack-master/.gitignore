@@ -1,0 +1,10 @@
+.env
+node_modules/
+uploads/
+*.log
+*.out.log
+*.err.log
+.DS_Store
+.vscode/
+mongo-27018/
+public/.DS_Store

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worker Panel | EcoTrack</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body class="app-shell">
+  <nav class="topbar">
+    <a class="brand" href="worker.html"><span class="brand-mark">E</span> Worker Panel</a>
+    <ul class="nav-links">
+      <li><a data-nav href="worker.html">Tasks</a></li>
+      <li><a data-nav href="dashboard.html">Dashboard</a></li>
+      <li><a data-logout href="index.html">Logout</a></li>
+    </ul>
+  </nav>
+  <main class="page">
+    <header class="page-header"><div><h1>Assigned field tasks</h1><p class="muted">Update cleanup progress and submit after-cleaning evidence.</p></div></header>
+    <section id="worker-tasks" class="grid grid-2"></section>
+    <section class="section panel">
+      <h2>QR bin scan</h2>
+      <form id="bin-scan-form" class="form-grid two">
+        <div class="field"><label>QR/Bin code</label><input name="binCode" required placeholder="BIN-001"></div>
+        <div class="field"><label>Area</label><input name="area" value="General Ward"></div>
+        <div class="field"><label>Location</label><input name="location" required></div>
+        <div class="field"><label>Fill level %</label><input name="fillLevel" type="number" min="0" max="100" value="40"></div>
+        <div class="field"><label>Status</label><select name="status"><option>Clean</option><option>Needs Cleaning</option><option>Maintenance</option></select></div>
+        <div class="field"><label>Maintenance notes</label><input name="maintenanceNotes"></div>
+        <button class="btn" type="submit">Save Bin Scan</button>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

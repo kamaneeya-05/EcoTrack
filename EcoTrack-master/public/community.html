@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community | EcoTrack</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-shell">
+  <nav class="topbar">
+    <a class="brand" href="dashboard.html"><span class="brand-mark">E</span> EcoTrack</a>
+    <ul class="nav-links">
+      <li><a data-nav href="dashboard.html">Dashboard</a></li>
+      <li><a data-nav href="community.html">Community</a></li>
+      <li><a data-logout href="index.html">Logout</a></li>
+    </ul>
+  </nav>
+  <main class="page">
+    <header class="page-header"><div><h1>Community discussion</h1><p class="muted">Share local cleanliness ideas and support suggestions.</p></div></header>
+    <section class="grid grid-2">
+      <form id="forum-form" class="panel form-grid">
+        <div class="field"><label>Title</label><input name="title" required></div>
+        <div class="field"><label>Area</label><input name="area" value="General Ward"></div>
+        <div class="field"><label>Message</label><textarea name="message" required></textarea></div>
+        <button class="btn" type="submit">Post</button>
+      </form>
+      <div id="forum-posts" class="grid"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

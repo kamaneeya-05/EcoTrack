@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Waste | EcoTrack</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-shell">
+  <nav class="topbar">
+    <a class="brand" href="dashboard.html"><span class="brand-mark">E</span> EcoTrack</a>
+    <ul class="nav-links">
+      <li><a data-nav href="dashboard.html">Dashboard</a></li>
+      <li><a data-nav href="report.html">Report</a></li>
+      <li><a data-nav href="track-status.html">Track</a></li>
+      <li><a data-logout href="index.html">Logout</a></li>
+    </ul>
+  </nav>
+  <main class="page">
+    <header class="page-header">
+      <div><h1>Report waste issue</h1><p class="muted">Capture evidence, pin the location, and submit for municipal action.</p></div>
+      <button id="detect-location" class="btn secondary" type="button">Detect GPS</button>
+    </header>
+    <section class="grid grid-2">
+      <form id="report-form" class="panel form-grid" enctype="multipart/form-data">
+        <input id="citizenName" name="citizenName" type="hidden">
+        <input id="citizenEmail" name="citizenEmail" type="hidden">
+        <input id="lat" name="lat" type="hidden">
+        <input id="lng" name="lng" type="hidden">
+        <div class="field"><label>Category</label><select id="category" name="category" required><option value="">Select category</option><option>Plastic Waste</option><option>Organic Waste</option><option>E-Waste</option><option>Metal Waste</option><option>Glass Waste</option><option>Medical Waste</option><option>Overflowing Bin</option><option>Illegal Dumping</option></select></div>
+        <div class="field"><label>Location</label><input id="location" name="location" required placeholder="Street, landmark, ward"></div>
+        <div class="field"><label>Area/Ward</label><input id="area" name="area" value="General Ward"></div>
+        <div class="field"><label>Description</label><textarea id="description" name="description" required></textarea></div>
+        <div class="form-grid two">
+          <div class="field"><label>Before image</label><input id="beforeImage" name="beforeImage" type="file" accept="image/*"></div>
+          <div class="field"><label>Additional image</label><input id="image" name="image" type="file" accept="image/*"></div>
+        </div>
+        <button class="btn" type="submit">Submit Report</button>
+        <div id="report-result"></div>
+      </form>
+      <aside class="grid">
+        <div id="report-map" class="map"></div>
+        <div class="panel"><h2>Nearby complaints</h2><div id="nearby-list" class="timeline"><p class="empty">Pin a location to check nearby reports.</p></div></div>
+      </aside>
+    </section>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | EcoTrack</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <section class="auth-main">
+      <a class="brand" href="index.html"><span class="brand-mark">E</span> EcoTrack</a>
+      <h1 style="margin-top: 24px;">Welcome back</h1>
+      <p class="muted">Access your role-based EcoTrack workspace.</p>
+      <form id="login-form" class="form-grid" style="margin-top: 22px;">
+        <div class="field"><label>Email</label><input id="email" name="email" type="email" required></div>
+        <div class="field"><label>Password</label><input id="password" name="password" type="password" required></div>
+        <button class="btn" type="submit">Login</button>
+        <p class="muted">New here? <a href="register.html">Create an account</a></p>
+      </form>
+      <div class="auth-note">
+        <strong>Test accounts</strong><br>
+        Admin: admin@test.com / Password123!<br>
+        Worker: worker@test.com / Password123!<br>
+        Citizen: citizen@test.com / Password123!<br>
+        Supervisor: supervisor@test.com / Password123!
+      </div>
+    </section>
+    <aside class="auth-side"><img src="eco.png" alt="EcoTrack"></aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
